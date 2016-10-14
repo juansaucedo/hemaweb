@@ -1,0 +1,35 @@
+#top/*Barra superior	*/{
+	background: navy;
+}
+/*ESTILO DE LIS ACTIVOS*/
+.navbar ul.nav > li > a:hover{
+	border-top: solid 5px #B40404;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+	background: #FF0000 !important;
+  color: #FAFAFA !important;
+}
+
+/*Fondo de slider*/
+.home-carousel .dark-mask{
+	background: navy;
+}
+
+/*Lineas bajo títulos*/
+.heading h1, .heading h2, .heading h3, .heading h4, .heading h5{
+	border-bottom: solid 5px navy;
+}
+
+/*Seccion de renta*/
+.bar.background-image-fixed-2.renta{
+	background: url(http://hema.com.mx/img/1.jpg) center top no-repeat;
+}
+#get-it{
+	background: navy;
+}
+
+/*Fondo de rosca y corte*/
+.bar.background-image-fixed-2.rosca-corte{
+	background: url(http://hema.com.mx/img/roscaCortePrincipal.PNG) center top no-repeat;
+	background-size: 100%;
+}
