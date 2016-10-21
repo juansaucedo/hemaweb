@@ -7,12 +7,9 @@
             
             @for($i = 0; $i < count($lineas); $i = $i + $colLineas)
                 <div class="row">
-                    @include('layout.inicio.lineas.col', ["index" => $i, "tam" => count($lineas), "limit" => $i + $colLineas])
+                    @include('layout.inicio.lineas.col', ["index" => $i, "tam" => count($lineas), "limit" => $i + $colLineas, "lineas" => $lineas])
                 </div>
-            @endfor
-
-
-            
+            @endfor            
             <!-- /.row -->
         </div>
     </div>

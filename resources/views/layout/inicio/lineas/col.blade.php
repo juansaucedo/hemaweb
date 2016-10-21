@@ -7,7 +7,7 @@
                     <img src="http://hema.com.mx/img/soldar.jpg" alt="" class="img-responsive img-circle">
                 </a>
             </div>
-            <h3><a href="{{ route('productos') }}">Test</a></h3>
+            <h3><a href="{{ route('productos') }}">{{$lineas[$i]['name']}}</a></h3>
             {{-- <p class="role">Alguna característica interesante </p>                             --}}
         </div>
         <!-- /.team-member -->
