@@ -13,9 +13,15 @@
 
 Route::get('/', 'Welcome')->name('inicio');
 
-Route::get('/productos', function () {
-    return view('productos');
+Route::get('/productos/', function () {
+    $lineas = \App\LineaDeArticulos::all();
+    $colLineas = 4;
+    return view ('lineas', ["lineas" => $lineas, "colLineas" => $colLineas]);
+    // return view('productos');
 })->name('productos');
+
+// Route::get('/productos/{id}', '\App\ArticlesFind@byLine')->name('productos');
+Route::get('productos/{id}/pagina/{page}/', 'ArticlesFind@byLine')->name('productoslinea');
 
 Route::get('/renta', function () {
     return view('renta');

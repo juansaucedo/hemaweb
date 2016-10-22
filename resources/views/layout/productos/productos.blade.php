@@ -4,7 +4,7 @@
 
                 <div class="row products">
 
-                    @for($i = 0; $i < 4; $i++)
+                    @for($i = 0; $i < $limit; $i++)
                         <div class="col-md-3 col-sm-4">
                             <div class="product">
                                 <div class="image">
@@ -14,8 +14,8 @@
                                 </div>
                                 <!-- /.image -->
                                 <div class="text">
-                                    <h3><a href="shop-detail.html">Fur coat with very but very very long name</a></h3>
-                                    <p class="price">$143.00</p>
+                                    <h3><a href="shop-detail.html">{{$articles[$i]['name']}}</a></h3>
+                                    <p class="price">{{$articles[$i]['price']}}</p>
                                     <p class="buttons">
                                     <br><br>
                                         <a href="{{ route('producto') }}" class="btn btn-default">Ver detalles</a>
@@ -34,7 +34,17 @@
 
                     <div class="pages">
                         <ul class="pagination">
-                            <li><a href="#">&laquo;</a>
+
+                            @for($i = 1; $i < $pags; $i++)
+                                @if($i == $currentPag)
+                                    <li class="active"><a href="{{ route('productoslinea', ['id'=> $idLine,'page'=>$i]) }}">{{$i}}</a> 
+                                @else
+                                     <li><a href="{{ route('productoslinea', ['id'=> $idLine,'page'=>$i]) }}">{{$i}}</a>
+                                @endif
+                               
+                            </li>
+                            @endfor
+                            {{-- <li><a href="#">&laquo;</a>
                             </li>
                             <li class="active"><a href="#">1</a>
                             </li>
@@ -47,7 +57,7 @@
                             <li><a href="#">5</a>
                             </li>
                             <li><a href="#">&raquo;</a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
 
